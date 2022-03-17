@@ -1,25 +1,23 @@
 export module employee;
-import <string>;
 
+import <string>;
 
 namespace Records {
 	const int DefaultStartingSalary{ 30'000 };
 	export const int DefaultRaiseAndDemeritAmount{ 1'000 };
 
-
 	export class Employee
 	{
 	public:
 		Employee(const std::string& firstName, const std::string& lastName);
+
 		void promote(int raiseAmount = DefaultRaiseAndDemeritAmount);
 		void demote(int demeritAmount = DefaultRaiseAndDemeritAmount);
 		void hire(); // Hires or rehires the employee
+		void fire(); // Dismisses the employee
+		void display() const;// Outputs employee info to console
 
-		voide fire(); // DIsmisses the employee
-
-		void display() const; // Outputs employee info to console
-
-		//Getter and Setters
+		// Getters and setters
 		void setFirstName(const std::string& firstName);
 		const std::string& getFirstName() const;
 
@@ -29,7 +27,7 @@ namespace Records {
 		void setEmployeeNumber(int employeeNumber);
 		int getEmployeeNumber() const;
 
-		voidsetSalary(int newSalary);
+		void setSalary(int newSalary);
 		int getSalary() const;
 
 		bool isHired() const;
@@ -40,9 +38,6 @@ namespace Records {
 		int m_employeeNumber{ -1 };
 		int m_salary{ DefaultStartingSalary };
 		bool m_hired{ false };
-
 	};
-
 }
-
 

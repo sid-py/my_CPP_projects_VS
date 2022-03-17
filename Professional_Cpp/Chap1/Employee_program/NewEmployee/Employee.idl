@@ -1,0 +1,9 @@
+namespace NewEmployee
+{
+    [default_interface]
+    runtimeclass Employee : Windows.UI.Xaml.Controls.Page
+    {
+        Employee();
+        Int32 MyProperty;
+    }
+}
